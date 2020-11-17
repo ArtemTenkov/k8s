@@ -5,5 +5,4 @@
 /bin
 /obj/Container
 /obj/Docker
-/obj/Release/netcoreapp3.1
 /obj
