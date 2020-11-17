@@ -7,10 +7,10 @@ spec:
   selector:
     matchLabels:
       app: facade-api
-  minReadySecons: 10
+  minReadySeconds: 10
   strategy:
     type: RollingUpdate
-    RollingUpdate: 
+    rollingUpdate: 
       maxUnavailable: 1
       maxSurge: 1
   template:
