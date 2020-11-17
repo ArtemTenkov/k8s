@@ -23,3 +23,23 @@ spec:
         image: starwarstoodmerkacr.azurecr.io/facadeapi:latest
         ports:
           - containerPort: 8080
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: star-wars-svc
+  labels:
+    app: facade-api
+  spec:
+    type: NodePort
+    ports:
+    - port: 8080
+      nodePort: 30001
+      protocol: TCP
+    selector:
+      app: facade-api
+
