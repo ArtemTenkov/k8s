@@ -34,12 +34,12 @@ metadata:
   name: star-wars-svc
   labels:
     app: facade-api
-  spec:
-    type: NodePort
-    ports:
-    - port: 8080
-      nodePort: 30001
-      protocol: TCP
-    selector:
-      app: facade-api
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30001
+    protocol: TCP
+  selector:
+    app: facade-api
 
