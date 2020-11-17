@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: facade-deploy
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: facade-api
+  minReadySecons: 10
+  strategy:
+    type: RollingUpdate
+    RollingUpdate: 
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: facade-api
+    spec:
+      containers:
+      - name: facadeapi
+        image: starwarstoodmerkacr.azurecr.io/facadeapi:latest
+        ports:
+          - containerPort: 8080
