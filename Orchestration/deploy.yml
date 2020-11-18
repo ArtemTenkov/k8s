@@ -37,9 +37,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
-    nodePort: 30001
-    protocol: TCP
+  - port: 80
   selector:
     app: facade-api
 
