@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: facadeapi
-        image: starwarstoodmerkacr.azurecr.io/facadeapi:latest
+        image: facadeapi
         ports:
           - containerPort: 8080
 
